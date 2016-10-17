@@ -1,4 +1,4 @@
-# TPFTV
+# API Symfony 2 Sandbox
 
 Simple API Symfony 2
 
