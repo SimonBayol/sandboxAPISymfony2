@@ -302,3 +302,6 @@
 [2016-10-17 10:04:12] request.INFO: Matched route "get_articles". {"route_parameters":{"_controller":"AppBundle\\Controller\\ArticlesController::getArticlesAction","_format":null,"_route":"get_articles"},"request_uri":"http://api.sandbox.dev/app_dev.php/articles"} []
 [2016-10-17 10:04:12] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
 [2016-10-17 10:04:13] doctrine.DEBUG: SELECT t0.id AS id_1, t0.title AS title_2, t0.leading_text AS leading_text_3, t0.body AS body_4, t0.created_at AS created_at_5, t0.slug AS slug_6, t0.created_by AS created_by_7 FROM article t0 [] []
+[2016-10-17 11:50:02] request.INFO: Matched route "get_articles". {"route_parameters":{"_controller":"AppBundle\\Controller\\ArticlesController::getArticlesAction","_format":null,"_route":"get_articles"},"request_uri":"http://api.sandbox.dev/app_dev.php/articles"} []
+[2016-10-17 11:50:02] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-10-17 11:50:02] doctrine.DEBUG: SELECT t0.id AS id_1, t0.title AS title_2, t0.leading_text AS leading_text_3, t0.body AS body_4, t0.created_at AS created_at_5, t0.slug AS slug_6, t0.created_by AS created_by_7 FROM article t0 [] []

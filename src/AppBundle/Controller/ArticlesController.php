@@ -72,6 +72,7 @@ class ArticlesController extends Controller
     {
         $article = new Article();
         //Ici l'entité est hydraté par le form
+
         $form = $this->createForm(new ArticleType(), $article);
         $form->submit($request->request->all());
         // Les validations sont faites ici
@@ -86,8 +87,13 @@ class ArticlesController extends Controller
 
             return $view;
         }else{
-            //TODO afficher la liste des erreures de validation
-            return new Response('invalid data input', 400);
+            //DONE afficher la liste des erreurs de validation
+            $errors = [];
+            foreach ($form->getErrors() as $error) {
+                $errors[] = $error->getMessage();
+            }
+            $jsonerrors =  json_encode($errors, JSON_PRETTY_PRINT);
+            return new Response($jsonerrors, 400);
         }
     }
 
