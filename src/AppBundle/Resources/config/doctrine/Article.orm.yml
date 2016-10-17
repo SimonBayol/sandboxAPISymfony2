@@ -1,0 +1,41 @@
+AppBundle\Entity\Article:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Entity\ArticleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+            nullable: false
+        leadingText:
+            type: text
+            nullable: true
+        body:
+            type: text
+            nullable: true
+        createdAt:
+            type: datetime
+            nullable: false
+        slug:
+            type: string
+            length: 255
+            nullable: false
+            gedmo:
+                slug:
+                    updatable: false
+                    separator: _
+                    style: lower
+                    fields:
+                        - title
+        createdBy:
+            type: string
+            length: 255
+            nullable: false
+    lifecycleCallbacks:
+            prePersist: [setCreatedAtValue]
